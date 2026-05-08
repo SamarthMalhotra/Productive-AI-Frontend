@@ -307,9 +307,10 @@ input:focus {
   }
 
   .inputBox input {
-    width: 105%;
+    width: 100%;
     padding: 13px;
     box-sizing: border-box;
+    margin-left: 15px;
   }
 
   .submit {
