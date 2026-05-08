@@ -1,0 +1,116 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+
+/* =========================
+   LOGIN FORM (WHITE BG FIXED)
+========================= */
+.login-form {
+  width: 350px;
+  padding: 25px;
+  border-radius: 12px;
+  /* ✅ Always white */
+  background-color: white;
+
+  border: 2px solid var(--border-color);
+
+  /* cleaner shadow */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0f172a; /* dark text for white bg */
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  outline: none;
+  /* ✅ white input */
+  background: #ffffff;
+  color: #0f172a;
+  transition: 0.3s;
+}
+.signup-link {
+  padding: 10px;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.input-group input:focus {
+  border-color: #0f172a;
+  box-shadow: 0 0 5px rgba(15, 23, 42, 0.3);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.login-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   RESPONSIVE (OPTIONAL)
+========================= */
+@media (max-width: 768px) {
+  .login-container {
+    margin-left: 0; /* remove sidebar spacing on mobile */
+    padding: 20px;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+}

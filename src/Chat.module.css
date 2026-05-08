@@ -1,0 +1,69 @@
+.chats {
+  max-width: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+  padding: 10px;
+  line-height: 2rem;
+}
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+.gptDiv {
+  text-align: left;
+  font-size: 0.9rem;
+}
+.userMessage {
+  background-color: var(--sidebar-bg);
+  padding: 10px 10px;
+  margin-left: 15rem;
+  border-radius: 15px;
+  width: 300px !important;
+  width: fit-Content;
+  color: var(--sidebar-text);
+  border: 1px solid var(--sidebar-border);
+  box-shadow:
+    rgba(0, 0, 195, 0.08) 0 5px 10px,
+    rgba(0, 0, 255, 0.08) 0 3px 6px,
+    rgba(255, 255, 255, 0.06) 0 2px 4px,
+    rgba(255, 255, 255, 0.03) 0 6px 10px;
+}
+.hljs {
+  border-radius: 15px;
+}
+@media (max-width: 576px) {
+  .chats {
+    max-width: 100%;
+    padding: 2rem 1rem; /* reduced padding for mobile */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+    line-height: 1.8rem;
+  }
+
+  .userDiv {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .gptDiv {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .userMessage {
+    /* background-color: #323232; */
+    padding: 10px 15px;
+    margin-left: 0; /* remove large left margin on mobile */
+    border-radius: 15px;
+    width: fit-content;
+    max-width: 90%; /* fit mobile screen */
+  }
+
+  .hljs {
+    border-radius: 15px;
+    font-size: 0.85rem; /* optional: slightly smaller code font */
+  }
+}

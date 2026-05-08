@@ -1,0 +1,199 @@
+/* =========================
+   ROOT DESIGN SYSTEM
+========================= */
+
+:root {
+  /* Typography */
+  --font-family: "Inter", system-ui, sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+  /* Transitions */
+  --transition: all 0.25s ease-in-out;
+}
+
+/* =========================
+   LIGHT THEME (CLEAN UI)
+========================= */
+
+.light-theme {
+  --bg-color: #f8fafc;
+  --surface-color: #ffffff;
+
+  --text-color: #0f172a;
+  --muted-text: #475569;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --nav-bg: #ffffff;
+  --border-color: #e2e8f0;
+
+  --bot-bubble: #f1f5f9;
+  --user-bubble: #2563eb;
+
+  --button-text: #ffffff;
+
+  --link: #1d4ed8;
+}
+
+/* =========================
+   DARK THEME (MODERN SAAS)
+========================= */
+
+.dark-theme {
+  --bg-color: #0b1220;
+  --surface-color: #111827;
+
+  --text-color: #e5e7eb;
+  --muted-text: #94a3b8;
+
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+
+  --nav-bg: #0f172a;
+  --border-color: #1f2937;
+
+  --bot-bubble: #1f2937;
+  --user-bubble: #3b82f6;
+
+  --button-text: #ffffff;
+
+  --link: #60a5fa;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* Scrollbar (clean hidden style) */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+/* =========================
+   CHAT CONTAINER
+========================= */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+}
+
+/* =========================
+   CHAT MESSAGES
+========================= */
+
+.message {
+  max-width: 70%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: var(--radius-lg);
+  line-height: 1.5;
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+/* Bot Message */
+.message.bot {
+  background: var(--bot-bubble);
+  color: var(--text-color);
+  align-self: flex-start;
+}
+
+/* User Message */
+.message.user {
+  background: var(--user-bubble);
+  color: white;
+  align-self: flex-end;
+}
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.chat-input-container {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid var(--border-color);
+  background: var(--surface-color);
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  outline: none;
+  background: transparent;
+  color: var(--text-color);
+}
+
+.chat-input:focus {
+  border-color: var(--primary);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  background: var(--primary);
+  color: var(--button-text);
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
