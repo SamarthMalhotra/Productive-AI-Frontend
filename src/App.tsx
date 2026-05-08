@@ -1,4 +1,3 @@
-import "./App.css";
 import { Toaster } from "sonner";
 import ContextProvider from "./ContextAPI/provider";
 import { Outlet } from "react-router-dom";
