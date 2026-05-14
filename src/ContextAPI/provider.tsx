@@ -82,10 +82,9 @@ function ContextProvider({ children }: { children: React.ReactNode }) {
       const newhistory = history.filter((item: history) => {
         return !data?.some((d) => d._id === item._id);
       });
-
       setData((prevData) => [...newhistory, ...(prevData || [])]);
+      setLink(true);
     }
-    setLink(true);
   };
   //Signup Route
   const signup = async () => {
