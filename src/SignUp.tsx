@@ -42,7 +42,7 @@ function SignUp() {
         </div>
 
         <div className="input-group password-group">
-          <label>Password</label>
+          <label>Password Must Be 8-16 Characters</label>
 
           <div className="password-box">
             <input

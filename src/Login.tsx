@@ -33,7 +33,7 @@ const Login = () => {
         </div>
 
         <div className="input-group">
-          <label>Password</label>
+          <label>Password Must Be 8-16 Characters</label>
           <input
             type="password"
             name="password"
@@ -41,6 +41,8 @@ const Login = () => {
             value={formData.password || ""}
             onChange={handleChange}
             required
+            min={8}
+            max={16}
           />
         </div>
 
